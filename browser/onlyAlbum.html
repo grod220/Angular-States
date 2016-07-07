@@ -1,0 +1,15 @@
+ <h3>{{ artist.name }}</h3>
+            <h3>Albums</h3>
+            <div class="row">
+              <div class="col-xs-4" ng-repeat="album in artist.albums">
+                <a class="thumbnail" href="#" ui-sref="singleAlbumView({albumId: album.id })">
+                  <img ng-src="{{ album.imageUrl }}">
+                  <div class="caption">
+                    <h5>
+                      <span>{{ album.name }}</span>
+                    </h5>
+                    <small>{{ album.songs.length }} songs</small>
+                  </div>
+                </a>
+              </div>
+            </div>
